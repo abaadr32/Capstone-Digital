@@ -14,11 +14,14 @@ function createParticles() {
     }
 }
 
-const hamburger = document.getElementById('hamburger');
-const navLinksMobile = document.getElementById('nav-links-mobile');
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('nav-links-mobile');
 
-hamburger.addEventListener('click', () => {
-    navLinksMobile.style.display = navLinksMobile.style.display === 'flex' ? 'none' : 'flex';
+    hamburger.addEventListener('click', function() {
+        // Toggle a class to show/hide the mobile menu
+        mobileMenu.classList.toggle('active');
+    });
 });
 
 document.querySelectorAll('.nav-link').forEach(link => {

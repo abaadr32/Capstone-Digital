@@ -191,7 +191,34 @@
             .hamburger {
         order: -1;
     }
-            .nav-links-mobile {
-                display: flex;
-            }
         }
+
+        .nav-links-mobile.active {
+    display: flex;
+}
+
+/* Extra small device support */
+@media (max-width: 400px) {
+    .nav-title {
+        font-size: 1.1rem;
+    }
+    .hamburger {
+        width: 24px;
+        height: 24px;
+    }
+    .hamburger div {
+        width: 24px;
+        height: 2px;
+    }
+    .nav-links-mobile {
+        width: 98%;
+        top: 48px;
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+    .nav-links-mobile .style {
+        font-size: 1rem;
+        padding: 10px 0;
+        width: 96%;
+    }
+}
